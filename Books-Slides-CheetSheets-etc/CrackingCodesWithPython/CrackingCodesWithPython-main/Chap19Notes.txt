@@ -1,0 +1,43 @@
+Notes Frequency Analysis
+
+PyPI, short for Python Package Index is the official third-party software repository for Python, with package manager utilities like pip relying on it as the default source for packages and their dependencies.
+    - malicious packages uncovered in npm and RubyGems
+
+E,A,T,I,O,N are the MOST common letters used in English language (eation is in order)
+V,K,J,X,Q,Z are the LEAST common letters used in English language
+
+** Calculating the frequency of a SIMPLE SUBSTITUTION Cipher Vs. TRANSPOSITION CIPHER
+
+SIMPLE SUBSTITUTION CIPHER
+  message = Jz e yet js azzfkfl e zeiv mbjib qafs eqejtsv bjs jtsvjtivs, bf mjuu sikgvjtjrf jv iuasfux, etl gtufss fwjlftif js awfkmbfuyjtq, bf mjuu kfzgsf va nfujfwf jv. Jz, at vbf avbfk betl, bf js azzfkfl sayfvbjtq mbjib ezzakls e kfesat zak eivjtq jt eiiakletif va bjs jtsvjtivs, bf mjuu eiifdv jv fwft at vbf sujqbvfsv fwjlftif. Vbf akjqjt az yxvbs js fpduejtfl jt vbjs mex. -Nfkvketl Kgssfuu
+
+    ASRXJILPWMCYOUEQNTHBFZGKVD  are in order the most frequent characters in this message- w/ 'A' being the most frequent
+    A,S,R,X,J,I are the MOST frequent in the cipher text & of that A & I are in the MOST frequent in the English language (EATION) 'so we have 2 points to our Match Score'
+    F,Z,G,K,V,D are the LEAST frequent in the cipher text & of that Z, K, V are in the LEAST frequent in the English language 'so we add 3 points to our Match Score'
+
+      MACTH SCORE = 5/12
+
+        If ciphertext is using a SIMPLE SUBSTITUTION CIPHER. It will not have a Very High Frequency Match Score!!!
+
+TRANSPOSITION Cipher
+  message '...'
+
+    EISNTHAOCLRFDGWVMUYBPZXQJK are in order the most frequent characters in this message- w/ 'E' being the most common and the 'I', and so on
+    E,I,S,N,T,H are the MOST frequent in the cipher text & of that E,I,N,T are in the MOST frequent in the English language (EATION) 'so we have 4 points to our Match Score'
+    P,Z,X,Q,J,K are the LEAST frequent in the cipher text & of that Z,X,Q,J,K are in the LEAST frequent in the English language 'so we add 4 points to our Match Score'
+
+      MATCH SCORE = 8/12
+
+        Cipher text using TRANSPOSITION CIPHER should have a Higher score than SUBSTITUTION CIPHER, Reason why is because Transposition cipher uses the same letters as plain text bust just Re-Arranges them
+
+Using Frequency Analysis on Vigenere Cipher
+    to hack Vigenere Cipher, we need to decrypt the subkeys individually.
+      how to: decrypt the letters encrypted w/ one subkey and perform frequency analysis to determine which decrypted ciphertext produces a letter that most closely matches that of regular English. (i.e. find which decryption has the has the highest frequency Match Score, which is a GOOD indication we have found the correct Subkey)
+
+    we repeat this with all subkeys (chap 20- will use Kasiski examination to determine [the Total Key Length])
+
+    There are 26 Decryptions fpr each Subkey (total # of letters in alphabet) in example we use 'PIZZA' a 5 SubKey encryption. computer only has to perform 26+26+26+26+26 or 156 decryptions for a five letter Key
+
+---MORE steps to hack Vigenere Cipher in Chap 20 ---
+
+   
