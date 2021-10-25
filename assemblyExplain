@@ -1,0 +1,13 @@
+-Executable Compiling:
+  -Source code is saved as "hello.c" -> passed to "assembler" and an object file (machine code) is created "hello.o" -> object file is passed to Linker and "hello.out" file is created!!
+      -.out files are a.k.a. .exe files
+      
+-#GCC is a compiler      
+  - # gcc hello.s -o hello   "creates .exe from source code file"
+  - # gcc hello.s -c         "creates .object file from source code"
+  - # gcc hello.o -o         "creates .out file /.exe file from object code"
+  
+-IAT "Import Address Table" located into the PE section of .exe 
+  -when compiling the LINKER will generate "stub function" for all the different functions"APIs" the .exe needs. these "stub functions" are located in the IAT
+  -IAT is a list of all the "stub functions". these stub functions show the actuall code address of what API your code is needing to use.
+  -Note: IAT HOOKING - changes the address of the "trusted" API function to point to malicious code
