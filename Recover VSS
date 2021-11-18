@@ -3,5 +3,9 @@ Standard users have no access to the VSS. Administrators have access to vssadmin
 It is possible to list and recover individual files from the VSS, as per the three-step process below:
 
 vssadmin list shadows
-set VSHADOW_DEVICE=\\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy1
-for /R %VSHADOW_DEVICE%\ %i in (*) do @echo %i
+
+mklink /D \Shadow \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy1\                (Creates a Link: Maps the shadow to drive )
+
+cd /Shadow/                                                                       (changes dir to C:\Shadow\
+
+dir /Shadow/Users                                                                 (Lists shadows Users Dir)
